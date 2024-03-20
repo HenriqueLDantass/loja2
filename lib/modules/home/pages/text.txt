@@ -1,0 +1,25 @@
+GridView.builder(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2, // Define o número de colunas
+                  childAspectRatio:
+                      0.5, // Define a relação de aspecto (largura / altura)
+                ),
+                itemCount: 10, // Número total de itens
+                itemBuilder: (context, index) {
+                  return Container(
+                    width: 200, // Largura fixa do item
+                    height: 300, // Altura fixa do item
+                    margin: const EdgeInsets.all(8), // Margem entre os itens
+                    color: Colors.blueGrey, // Cor de fundo do item
+                    child: Center(
+                      child: Text(
+                        'Item $index',
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                        ),
+                      ),
+                    ),
+                  );
+                },
+              ));
